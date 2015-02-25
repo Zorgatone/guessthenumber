@@ -16,9 +16,9 @@
 #include "cliunix.h"
 
 void clipause(char *message) {
-	if (message != NULL && strlen(message) > 0) {
-		fputs(message, stdout);
-	}
-	getch();
-	putchar('\n');
+    if (message != NULL && strlen(message) > 0) {
+        fputs(message, stdout);
+    }
+    getch();
+    putchar('\n');
 }

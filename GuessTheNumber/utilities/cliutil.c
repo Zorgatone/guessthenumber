@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /* __unix__ is usually defined by compilers targeting Unix systems */
 #ifdef __unix__ 
@@ -15,7 +16,9 @@
 #include "cliunix.h"
 
 void clipause(char *message) {
-	fputs(message, stdout);
+	if (message != NULL && strlen(message) > 0) {
+		fputs(message, stdout);
+	}
 	getch();
 	putchar('\n');
 }
